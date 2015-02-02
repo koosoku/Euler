@@ -2,11 +2,11 @@
 public class longestCollatz {
 
 	public static void main(String[] args){
-		int largestCount = 0;
-		int largestNum = 0;
-		int temp;
+		long largestCount = 0;
+		long largestNum = 0;
+		long temp;
 		
-		for(int i = 1; i<=1000000; i++){
+		for(long i = 1; i<=1000000; i++){
 			 temp = collatzCounter(i);
 			 
 			 if(temp>largestCount){
@@ -16,13 +16,12 @@ public class longestCollatz {
 		}
 		System.out.println(largestCount);
 		System.out.println(largestNum);
-			
 		
 	}
 	
-	public static int collatzCounter(int input){
+	public static long collatzCounter(long input){
 		
-		int counter = 1;
+		long counter = 1;
 		
 		System.out.print(input+ "\t");
 		while (input != 1){
@@ -33,8 +32,6 @@ public class longestCollatz {
 				input = input*3+1;
 			}
 			counter++;
-			
-			
 		}
 		System.out.println(counter);
 		return counter;
